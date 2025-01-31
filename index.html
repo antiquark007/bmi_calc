@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html la="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    
     <div class="container">
-        <!-- <h1 style="text-align: center;">KNOW YOUR HEALTH</h1> -->
         <h2 style="text-align: center;">KNOW YOUR BMI</h2>
-        <form >
+        <form>
             <p class="inputs">
                 <label>Height(cm)</label>
-                <input type="number" id="Height" min="1">
+                <input type="number" id="height" min="1">
             </p>
             <p class="inputs">
                 <label>Weight(kg)</label>
-                <input type="number" id="Weight" min="1">
+                <input type="number" id="weight" min="1">
             </p>
-            <button class="bmi_btn">Calculate </button>
-            <div style="margin-top: 20px;">your bmi is: <p id="results"></p></div>
+            <button class="bmi_btn" type="submit">Calculate</button>
+            <div style="margin-top: 20px;">Your BMI is: <span id="results"></span></div>
             <p id="message"></p>
         </form>
-
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
