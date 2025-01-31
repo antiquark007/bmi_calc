@@ -1,12 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
+    const heightInput = document.querySelector('#height');
+    const weightInput = document.querySelector('#weight');
+    const results = document.getElementById('results');
+    const message = document.getElementById('message');
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const height = parseInt(document.querySelector('#height').value);
-        const weight = parseInt(document.querySelector('#weight').value);
-        const results = document.getElementById('results');
-        const message = document.getElementById('message');
+        calculateBMI();
+    });
+
+    heightInput.addEventListener('input', calculateBMI);
+    weightInput.addEventListener('input', calculateBMI);
+
+    function calculateBMI() {
+        const height = parseInt(heightInput.value);
+        const weight = parseInt(weightInput.value);
+
         if (isNaN(height) || height <= 0) {
             results.innerHTML = "Please provide a valid height";
             message.innerHTML = "";
@@ -24,5 +34,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 message.innerHTML = "You are overweight";
             }
         }
-    });
+    }
 });

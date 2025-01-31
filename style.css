@@ -13,6 +13,23 @@ body{
     justify-content: center;
     background-color: rgb(57, 5, 106);
 }
+header {
+    background-color: rgb(77, 22, 229);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 10px 10px 0 0;
+}
+footer {
+    background-color: rgb(77, 22, 229);
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 0 0 10px 10px;
+    margin-top: 20px;
+}
 .container{
     width: 22rem;
     margin-top: 8rem;
@@ -28,6 +45,12 @@ body{
 .inputs input{
     outline: none;
     height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.inputs input:focus {
+    border-color: rgb(77, 22, 229);
 }
 #results {
     font-size: 20px;
@@ -44,6 +67,10 @@ body{
     color: rgb(247, 241, 241);
     cursor: pointer;
     font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+.bmi_btn:hover {
+    background-color: rgb(57, 5, 106);
 }
 #message{
     text-align: center;
