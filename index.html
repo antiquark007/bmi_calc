@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>BMI Calculator</h1>
+    </header>
     <div class="container">
         <h2 style="text-align: center;">KNOW YOUR BMI</h2>
         <form>
             <p class="inputs">
-                <label>Height(cm)</label>
-                <input type="number" id="height" min="1">
+                <label for="height">Enter your height in centimeters (cm):</label>
+                <input type="number" id="height" min="1" placeholder="e.g., 170">
             </p>
             <p class="inputs">
-                <label>Weight(kg)</label>
-                <input type="number" id="weight" min="1">
+                <label for="weight">Enter your weight in kilograms (kg):</label>
+                <input type="number" id="weight" min="1" placeholder="e.g., 65">
             </p>
             <button class="bmi_btn" type="submit">Calculate</button>
             <div style="margin-top: 20px;">Your BMI is: <span id="results"></span></div>
             <p id="message"></p>
         </form>
     </div>
+    <footer>
+        <p>Stay healthy!</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
